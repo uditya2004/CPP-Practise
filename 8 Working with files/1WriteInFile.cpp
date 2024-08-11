@@ -18,48 +18,56 @@ In order to work with files in C++, we will have to open the file first . There 
 */
 
 
+//==========================================================================
+
+
+// Question:- Input string from user and put it in the file named "sample.txt"
 
 #include <iostream>
-#include <fstream>    //Used for working with files
+#include <fstream> //Used for working with files
 
 using namespace std;
 
-
-//opening a file and writing in it.
-// int main() {
-
-//     string str1 = "uditya Kumar";      //Sample text stored in a variable
-
-    
-//     ofstream obj1("sample.txt");       // Opening a file using constructor method, for writing
-//     obj1<<str1;                        // writing string in str1 into the file. Works like "cout"
-
-//     obj1.close();                      // closing a file
-//     return 0;
-// }
-
-
-
-//============================================
-
-//Ques :- Input string from user and put it in the file named "sample.txt"
+//Method 1:- Write using constructor method
 
 int main() {
 
     //Taking String Input From User
-    string str1;
-    cout<<"Enter a string: ";
-    // cin>> str1;              // This takes only 1 word as input
-    getline(cin, str1);         // This will take complete line as input
+    string data;
+    cout<<"Enter string data to be stored: ";
+    // cin>> data;              // This takes only 1 word as input
+    getline(cin, data);         // This will take complete line as input
 
 
 
     //Opening and writing it to file
-    ofstream obj1("sample.txt");      // Here we are opening a file using constructor method.
-    obj1<<str1;                      // But this write only the 1st word of string into the file
+    ofstream obj1("sample.txt");         // Opening a file using constructor method, for writing
+    obj1<<data;                         //writing string in "data" into the file. Works like "cout"
+
+    obj1.close();      //A good programmer always close a file after use.
+
+    return 0;
+}
 
 
-    obj1.close();  // closing a file
-    
+//==============================================
+//Method 2:- Write using open() method
+int main() {
+
+    //Taking String Input From User
+    string data;
+    cout<<"Enter string data to be stored: ";
+    getline(cin, data);
+
+    //Opening and writing it to file
+    ofstream obj1;
+    obj1.open("practise.txt");   //opening the file
+
+    obj1<<data;                 // Pushing the info in "data" variable into the file
+
+
+    obj1.close();
+
+
     return 0;
 }
