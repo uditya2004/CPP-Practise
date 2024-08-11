@@ -31,7 +31,7 @@ using namespace std;
 //     string str1 = "uditya Kumar";      //Sample text stored in a variable
 
     
-//     ofstream obj1("sample.txt");       // Opening a file for writing
+//     ofstream obj1("sample.txt");       // Opening a file using constructor method, for writing
 //     obj1<<str1;                        // writing string in str1 into the file. Works like "cout"
 
 //     obj1.close();                      // closing a file
