@@ -5,7 +5,7 @@
 #include <fstream>
 using namespace std;
 
-//Method 1:- Write using constructor method
+//Method 1:- Reading using constructor method
 int main() {
     string data;                          // Creating a variable to store string brought from the file
 
@@ -24,7 +24,7 @@ int main() {
 
 //==========================================================
 
-//Method 2:- Write using open() method
+//Method 2:- Reading using open() method
 // int main() {
 //     string data;
 
@@ -40,3 +40,30 @@ int main() {
 
 //     return 0;
 // }
+
+
+//============================================
+//Method 3:- Reading the file using eof()
+
+#include <iostream>
+#include <fstream>
+
+#include <string>                        //eof() is present in "string" header file.
+using namespace std;
+
+int main() {
+    ifstream obj1;
+    obj1.open("sample.txt");
+
+    string data;                         // creating a variable to store data
+
+    //When we have to print multiple lines stored in a file
+    while (obj1.eof() == 0) {             // We run the loop untile "End of file" is not encountered
+        getline(obj1, data);              // In every iteration it stores 1 line into variable "data", in next iteration it stores next line
+        cout<<data<<endl;
+    }
+
+    obj1.close();                          // A good programmer always close the file after use
+
+    return 0;
+}

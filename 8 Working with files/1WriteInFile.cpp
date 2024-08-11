@@ -29,7 +29,6 @@ In order to work with files in C++, we will have to open the file first . There 
 using namespace std;
 
 //Method 1:- Write using constructor method
-
 int main() {
 
     //Taking String Input From User
