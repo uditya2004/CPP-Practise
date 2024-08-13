@@ -1,25 +1,31 @@
+class Car {
 
-class Parent {
 public:
-    void hello() {
-        cout<<"Parent hello..\n";
-    }
-};
+    string name;
+    string color;
 
-class Child : public Parent {
-public:
-    void hello() {
-        cout<<"Child Hello..\n";
+    Car(string name, string color) {
+        this->name=name;
+        this->color=color;
     }
-};
 
+    //copy constructor
+    Car(Car& original) {
+        cout<<"copying original no..\n";
+        name= original.name;
+        color= original.color;
+    }
+
+
+};
 
 int main() {
-    Child child1;
-    Parent *ptr;   // We created pointer of parent class . This mean Pointer "ptr" will point to the object of parent class
+    Car obj1("BMW","Blue");
 
-    ptr = &child1;   // Hai to pointer parent class ka , lekin child class ko point kar rha hai. Here we are binding our parent class pointer with the child class object.
-    
-    ptr->hello();   // Output: Child Hello..
+    Car obj2(obj1);    //This time our copy constructor will be called.
+
+    cout<<"name:- "<<obj2.name<<endl;
+    cout<<"color:- "<<obj2.color<<endl;
+
     return 0;
 }

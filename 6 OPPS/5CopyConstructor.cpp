@@ -25,7 +25,7 @@ using namespace std;
 //     string color;
 
 //     Car(string name, string color) {
-//         this->name=name;
+//         this->name=name;                //"name" on left indicate the name property for object. "name" on the right-hand side is the parameter passed to the constructor. 
 //         this->color=color;
 //     }
 
