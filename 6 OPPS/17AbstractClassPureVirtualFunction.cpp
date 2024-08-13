@@ -40,10 +40,10 @@ public:
 
 int main() {
     Circle cir1;
-    cir1.draw();
+    cir1.draw();    //Output : Draw circle..
 
     Square sq1;
-    sq1.draw();
+    sq1.draw();    // Output: Draw Square..
 
 
     return 0;
