@@ -12,6 +12,11 @@ public:
         regno = regnoVal;
     }
 
+    void show() {
+        cout<<"name: "<<name<<endl;
+        cout<<"regno: "<<regno<<endl;
+    }
+
     ~Student(){
         cout<<"Destructor called....";
     }
@@ -19,6 +24,8 @@ public:
 
 int main() {
     Student stud1("uditya", "23bce10497");
+
+    stud1.show();
 
 
 }
