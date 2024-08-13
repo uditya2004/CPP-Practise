@@ -6,9 +6,9 @@ When a function is inline , then the complete body of the function is pasted in 
 */
 #include <iostream>
 using namespace std;
-
-inline int Getmax(int a, int b) {
-    return a>b ? a:b ;       // Use of Ternary Operator
+ 
+inline int Getmax(int a, int b) {          // Use of inline keyword
+    return a>b ? a:b ;                     // Use of Ternary Operator
 }
 
 
