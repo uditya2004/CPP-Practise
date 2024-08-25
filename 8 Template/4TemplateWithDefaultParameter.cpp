@@ -39,10 +39,10 @@ void display(T1 val1, T2 val2){
 }
 
 int main() {
-    display<int>(19, "uditya");      //If not specified , will use the default datatype. Otherwise it use the specified datatype
+    display(19, "uditya");      //If not specified , will use the default datatype. Otherwise it use the specified datatype
 
 
-    display<int, double>(19, 2.456);
+    display(19, 2.456);   // in functions even if we do not specify the datatype , it works . But in class we have to pecify the datatype while creating object.
 
     return 0;
 }
