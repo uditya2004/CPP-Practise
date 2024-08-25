@@ -22,9 +22,9 @@ public:
 
 int main() {
     Summation<int> obj1(5, 4);
-    Summation<double> obj2(4.1, 2.1);
+    obj1.show();
 
-    // obj1.show();
+    Summation<double> obj2(4.1, 2.1);
     obj2.show();
 
     return 0;

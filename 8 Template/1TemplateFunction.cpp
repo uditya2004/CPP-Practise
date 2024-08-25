@@ -39,7 +39,7 @@ int main() {
     double c = 11.5;
     double d = 6.2;
 
-    cout<<"Max of:"<<a<<" and"<<b<<" is: "<<getmax(c,d)<<endl;
+    cout<<"Max of:"<<c<<" and"<<d<<" is: "<<getmax(c,d)<<endl;
 
     return 0;
 }
