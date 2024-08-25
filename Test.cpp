@@ -1,27 +1,28 @@
 #include <iostream>
 using namespace std;
 
-template <typename T1, typename T2>
-class myPair{
-    T1 first;
-    T2 second;
-
+template <typename T1, typename T2 = string>
+class Demo{
+    T1 val1;
+    T2 val2;
 public:
-    myPair(T1 a, T2 b){
-        first = a;
-        second = b;
+    Demo(T1 a, T2 b){
+        val1 = a;
+        val2 = b;
     }
 
     void display(){
-        cout<<"First: "<<first<<" Second: "<<second<<endl;
+        cout<<"val1: "<< val1<<"  val2: "<<val2 << endl;
     }
 };
 
 int main() {
-    myPair<int , double> obj1(1, 3.4);
+    Demo<int> obj1(1,"uditya");
     obj1.display();
 
-    myPair<int, string> obj2(1, "uditya");
+
+    Demo<string , double> obj2("uditya", 9.456);
     obj2.display();
+
     return 0;
 }
