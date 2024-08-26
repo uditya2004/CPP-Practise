@@ -27,7 +27,6 @@ int main() {
 
     Display(phonebook);
 
-
     //size of the map
     cout<<"size: "<<phonebook.size()<<endl;
 
