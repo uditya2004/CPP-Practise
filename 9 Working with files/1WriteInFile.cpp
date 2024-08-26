@@ -51,6 +51,12 @@ int main() {
 
 //==============================================
 //Method 2:- Write using open() method
+
+#include <iostream>
+#include <fstream> //Used for working with files
+
+using namespace std;
+
 int main() {
 
     //Taking String Input From User
@@ -60,13 +66,40 @@ int main() {
 
     //Opening and writing it to file
     ofstream obj1;
-    obj1.open("practise.txt");   //opening the file
+    obj1.open("sample.txt");   //opening the file
 
     obj1<<data;                 // Pushing the info in "data" variable into the file
 
 
     obj1.close();
 
+
+    return 0;
+}
+
+
+//============================
+//Ques: Input 3 lines and store every line in a separate line into the file named "sample.txt"
+#include <iostream>
+#include <fstream> //Used for working with files
+
+using namespace std;
+
+int main(){
+    string data;
+
+    ofstream obj1;
+    obj1.open("sample.txt");
+
+    for (int i=1 ; i<4 ; i++){
+        cout<<"Enter "<<i<<" string";
+        getline(cin, data);
+
+        obj1<<data<<"\n";         // Add the string to the file followed by a newline
+
+    }
+
+    obj1.close();
 
     return 0;
 }
