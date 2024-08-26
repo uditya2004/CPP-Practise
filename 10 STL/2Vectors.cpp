@@ -16,8 +16,8 @@ void Display( vector<int>  &grades ){
 int main() {
     vector<int> grades;     // We created an object "grades" for the template class vector.
 
-    // Adding grades
-    grades.push_back(85);          // "push_back" takes a value and add it to the end of the vector
+    // Adding grades at the end of the vector
+    grades.push_back(85);          
     grades.push_back(90);
     grades.push_back(78);
     grades.push_back(99);
