@@ -25,21 +25,21 @@ int main() {
 //==========================================================
 
 //Method 2:- Reading using open() method
-// int main() {
-//     string data;
+int main() {
+    string data;
 
-//     ifstream obj1;
-//     obj1.open("sample.txt");
+    ifstream obj1;
+    obj1.open("sample.txt");
 
-//     getline(obj1, data);
+    getline(obj1, data);
 
-//     cout<<data<<endl;
+    cout<<data<<endl;
 
-//     obj1.close();
+    obj1.close();
 
 
-//     return 0;
-// }
+    return 0;
+}
 
 
 //============================================
@@ -58,7 +58,7 @@ int main() {
     string data;                         // creating a variable to store data
 
     //When we have to print multiple lines stored in a file
-    while (obj1.eof() == 0) {             // We run the loop untile "End of file" is not encountered
+    while (obj1.eof() == false) {             // We run the loop untile "End of file" is not encountered
         getline(obj1, data);              // In every iteration it stores 1 line into variable "data", in next iteration it stores next line
         cout<<data<<endl;
     }
