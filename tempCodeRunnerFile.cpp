@@ -1,1 +1,1 @@
-fixed <<
+out<<data2<<endl;
