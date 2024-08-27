@@ -93,7 +93,7 @@ int main(){
 
     for (int i=1 ; i<4 ; i++){
         cout<<"Enter "<<i<<" string";
-        getline(cin, data);
+        getline(cin, data);       // his means -> we take 1 line from "cin" and add it to "data".
 
         obj1<<data<<"\n";         // Add the string to the file followed by a newline
 
