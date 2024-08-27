@@ -46,3 +46,43 @@ int main() {
 
     return 0;
 }
+
+//==========================
+
+#include <iostream>
+using namespace std;
+
+class Animal {
+public:
+    void breath() {
+        cout << "breaths..." << endl;
+    }
+
+    void eats() {
+        cout << "eats..." << endl;
+    }
+};
+
+class Mammal {
+public:
+    string bloodType = "warm";
+
+};
+
+class Fish : public Animal, public Mammal {
+public:
+    void swims() {
+        cout << "swims in water..." << endl;
+    }
+};
+
+int main() {
+    Fish fishObj;
+
+    fishObj.breath();            // From Animal class
+    fishObj.eats();              // From Animal class
+    cout << "Blood type: " << fishObj.bloodType << endl;  // From Mammal class
+    fishObj.swims();             // From Fish class
+
+    return 0;
+}
